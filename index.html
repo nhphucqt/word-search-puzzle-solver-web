@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Word search puzzle solver</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="background-color: lightblue;" onbeforeunload="return ''">
+        <div class="sidenav">
+            <button id="solveButton" class="navButton" title="Solve puzzle!" onclick="puzzleSolve()">
+                <ion-icon src="icon/caret-forward-circle-outline.svg"></ion-icon>
+            </button>
+            <button id="findAllButton" class="navButton" title="Find all words" onclick="printResultForAllWords()" disabled>
+                <ion-icon src="icon/search-outline.svg"></ion-icon>
+            </button>
+            <button id="findEachButton" title="Find each word" class="navButton" onclick="findEachWord()" disabled>
+                <ion-icon src="icon/search-circle-outline.svg"></ion-icon>
+            </button>
+            <button id="findPrevButton" title="Find prev word" class="navButton" onclick="findPrevWord()" disabled>
+                <ion-icon src="icon/arrow-back-outline.svg"></ion-icon>
+            </button>
+            <button id="findNextButton" title="Find next word" class="navButton" onclick="findNextWord()" disabled>
+                <ion-icon src="icon/arrow-forward-outline.svg"></ion-icon>
+            </button>
+            <a title="nhphucqt's github profile" class="navButton navLink" href="https://github.com/nhphucqt">
+                <ion-icon src="icon/logo-github.svg"></ion-icon>
+            </a>
+        </div>
+        <div class="main">
+            <div>
+                <p id="findWordText" class="resultText"></p>
+                <p id="resultText" class="resultText"></p>
+            </div>
+            <div style="height: 100%;">
+                <textarea id="inputMatrix" wrap="off" spellcheck="false" autofocus class="textareastyle" style="height:70%"></textarea>
+                <textarea id="inputWordList" wrap="off" spellcheck="false" class="textareastyle" style="height:30%;"></textarea>
+            </div>
+            <div>
+            </div>
+        </div>
+
+        <script src="puzzle_solver.js"> </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

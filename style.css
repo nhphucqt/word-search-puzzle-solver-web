@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    padding-bottom: 15px;
+    height: 100%
+}
+.sidenav {
+    height: 100%;
+    width: 50px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #38393b;
+    overflow-x: hidden;
+    padding-top: 10px;
+}
+.navButton {
+    width: 50px;
+    height: 50px;
+    background: #38393b;
+    color: grey;
+    font-size: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+.navButton:hover:enabled {
+    color:white;
+}
+.navButton:hover:disabled {
+    cursor: unset;
+}
+.navLink:hover {
+    color:white;
+}
+.main {
+    margin-left: 50px;
+    height: 100%;
+}
+.textareastyle {
+    width: 100%;
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    resize: none;
+}
+.resultText {
+    padding-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+}
