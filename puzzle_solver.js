@@ -198,7 +198,7 @@ function printResultForAllWords() {
 }
 
 function printResultForWord(id) {
-    document.getElementById("findWordText").innerHTML = "Find word: " + words[id] + "<hr>";
+    document.getElementById("findWordText").innerHTML = "Find word #" + (id+1) + ": " + words[id] + "<hr>";
     markCell(dirListOfWord[id]);
     printResult();
 }
@@ -211,13 +211,13 @@ function findEachWord() {
 }
 
 function findPrevWord() {
-    if (wordId == 0) return;
-    printResultForWord(--wordId);
+    if (--wordId < 0) wordId = words.length - 1;
+    printResultForWord(wordId);
 }
 
 function findNextWord() {
-    if (wordId+1 == words.length) return;
-    printResultForWord(++wordId);
+    if (++wordId == words.length) wordId = 0;
+    printResultForWord(wordId);
 }
 
 function puzzleSolve() {
