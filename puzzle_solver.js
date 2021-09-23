@@ -190,7 +190,7 @@ function printResult() {
 }
 
 function printResultForAllWords() {
-    document.getElementById("findWordText").innerHTML = "Find all words!<hr>";
+    document.getElementById("findWordText").innerHTML = "Find all words!<hr class='horizon'>";
     markCell(dirListAllWords);
     printResult();
     document.getElementById("findPrevButton").disabled = true;
@@ -198,7 +198,7 @@ function printResultForAllWords() {
 }
 
 function printResultForWord(id) {
-    document.getElementById("findWordText").innerHTML = "Find word #" + (id+1) + ": " + words[id] + "<hr>";
+    document.getElementById("findWordText").innerHTML = "Find word #" + (id+1) + ": " + words[id] + "<hr class='horizon'>";
     markCell(dirListOfWord[id]);
     printResult();
 }

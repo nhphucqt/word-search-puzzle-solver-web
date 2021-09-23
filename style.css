@@ -53,3 +53,9 @@ html, body {
     font-family: 'Courier New', Courier, monospace;
     white-space: nowrap;
 }
+.horizon {
+    height:1.5px;
+    border-width:0;
+    color:black;
+    background-color:black;
+}
